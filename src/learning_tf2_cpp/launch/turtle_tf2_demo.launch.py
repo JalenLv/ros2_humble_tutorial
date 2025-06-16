@@ -11,7 +11,7 @@ def generate_launch_description():
             name='sim',
         ),
         Node(
-            package='learning_tf2_py',
+            package='learning_tf2_cpp',
             executable='turtle_tf2_broadcaster',
             name='broadcaster1',
             parameters=[
@@ -24,7 +24,7 @@ def generate_launch_description():
             description='Target frame name.',
         ),
         Node(
-            package='learning_tf2_py',
+            package='learning_tf2_cpp',
             executable='turtle_tf2_broadcaster',
             name='broadcaster2',
             parameters=[
@@ -32,12 +32,11 @@ def generate_launch_description():
             ],
         ),
         Node(
-            package='learning_tf2_py',
+            package='learning_tf2_cpp',
             executable='turtle_tf2_listener',
             name='listener',
             parameters=[
                 {'target_frame': LaunchConfiguration('target_frame')},
             ],
         ),
-
     ])
