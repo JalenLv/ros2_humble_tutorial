@@ -1,6 +1,4 @@
 import math
-from re import S
-import re
 
 from geometry_msgs.msg import Twist
 
